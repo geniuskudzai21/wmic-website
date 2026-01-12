@@ -47,7 +47,17 @@ const revealOnScroll = () => {
         const windowHeight = window.innerHeight;
         
         if (elementTop < windowHeight - 100) {
-            element.classList.add('visible');
+            // Check if this is a team card and apply 3s delay based on screen width
+            if (element.classList.contains('team-card')) {
+                if (!element.classList.contains('team-delayed')) {
+                    element.classList.add('team-delayed');
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, 3000);
+                }
+            } else {
+                element.classList.add('visible');
+            }
         }
     });
 };
