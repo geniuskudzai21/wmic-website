@@ -111,19 +111,47 @@ if (contactForm) {
         });
         
         if (isValid) {
-            // Show success message
+            // Get form data
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const phone = formData.get('phone');
+            const service = formData.get('service');
+            const message = formData.get('message');
+            
+            // Create email content
+            const emailSubject = encodeURIComponent(`New Contact Form Submission from ${name}`);
+            const emailBody = encodeURIComponent(
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Phone: ${phone}\n` +
+                `Service Interest: ${service}\n\n` +
+                `Message:\n${message}`
+            );
+            
+            // Send to multiple email addresses
+            const emailAddresses = ['wealthmanagementinvestimenst@gmail.com', 'wmicrecruitement@gmail.com'];
+            
+            // Show sending state
             const submitBtn = contactForm.querySelector('.btn[type="submit"]');
             const originalText = submitBtn.textContent;
             
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
             
+            // Create mailto links for each email
+            emailAddresses.forEach(email => {
+                const mailtoLink = `mailto:${email}?subject=${emailSubject}&body=${emailBody}`;
+                window.open(mailtoLink, '_blank');
+            });
+            
+            // Show success message after a short delay
             setTimeout(() => {
-                alert('Thank you for your message! We will contact you shortly.');
+                alert('Thank you for your message! Your email client has opened. Please send the email to complete your submission.');
                 contactForm.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            }, 1000);
         }
     });
     
