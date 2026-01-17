@@ -193,7 +193,13 @@ a {
     background-color: var(--accent-gold);
     transform: translateY(-2px);
 }
-
+.centering{
+    display: flex;
+    justify-content: center;   /* horizontal center */
+   align-items: center;       /* vertical center if needed */
+  gap: 12px;
+}
+ 
 .btn-secondary {
     background-color: transparent;
     border: 1px solid var(--accent-gold);

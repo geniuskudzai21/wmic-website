@@ -214,8 +214,12 @@
         padding: 14px 24px;
         font-size: 0.95rem;
     }
+    .centering{
+     flex-direction: column;
+    }
     .btn{
         margin-top: 12px;
         margin-bottom: 10px;
+        padding: 10px 17px
     }
 }
