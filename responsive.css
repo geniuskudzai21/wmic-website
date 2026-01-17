@@ -91,6 +91,12 @@
         gap: 15px;
     }
     
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 15px 0;
+    }
+    
     .matrix {
         width: 250px;
         height: 250px;
@@ -162,5 +168,54 @@
     .contact-container {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 18px 0;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 18px 0;
+        padding: 14px 24px;
+        font-size: 0.95rem;
+    }
+    .btn{
+        margin-top: 12px;
+        margin-bottom: 10px;
     }
 }
