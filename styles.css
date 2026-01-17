@@ -9,7 +9,7 @@
     --primary-silver-dark: #e7eaee;
     --secondary-navy: #1a365d;
     --secondary-charcoal: #00163b;
-    --accent-gold: #51ff00;
+    --accent-gold: #00c9fc;
     --accent-gold-light: #f4e4b5;
     --text-dark: #000000;
     --text-light: #324c74;
@@ -595,7 +595,7 @@ a {
 }
 
 .footer {
-    background: var(--secondary-navy);
+    background: var(--secondary-charcoal);
     color: var(--white);
     padding: var(--space-xl) 0 20px;
 }
