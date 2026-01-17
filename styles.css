@@ -190,7 +190,7 @@ a {
     padding: 12px 32px;
     background-color: var(--secondary-charcoal);
     color: var(--white);
-    border: 1px solid var(--accent-gold);
+    border: 2px solid var(--accent-gold);
     border-radius: var(--radius-md);
     font-weight: 600;
     cursor: pointer;
@@ -206,7 +206,7 @@ a {
 .btn-header {
     padding: 10px 28px;
     font-size: 0.9rem;
-    background-color: var(--secondary-charcoal);
+    background-color: transparent;
     color: var(--white);
     border: none;
     border-radius: var(--radius-md);
@@ -218,6 +218,7 @@ a {
 
 .btn-header:hover {
     background-color: var(--accent-gold);
+    color: var(--white);
     transform: translateY(-1px);
 }
 .centering{
@@ -269,6 +270,35 @@ a {
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
 }
+
+.cta-hero {
+    position: relative;
+    padding: var(--space-xl) 0;
+    color: var(--white);
+    text-align: center;
+    overflow: hidden;
+}
+
+.cta-hero:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/company.jpg') center / cover no-repeat;
+    filter: blur(3px);
+    transform: scale(1.1);
+    z-index: -2;
+}
+
+.cta-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.77);
+    z-index: -1;
+}
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
@@ -304,6 +334,7 @@ a {
 }
 .section {
     padding: var(--space-xl) 0;
+    
 }
 
 .section-header {
@@ -632,7 +663,7 @@ a {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--accent-gold);
     font-size: 0.875rem;
 }
 .footer-bottom p{
