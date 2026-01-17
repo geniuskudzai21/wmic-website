@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
 }
 h2 {
     font-size: 2rem;
@@ -79,17 +79,29 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--white);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 2px 20px var(--shadow);
+    background: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: none;
     z-index: 1000;
     transition: 0.3s ease;
+  
 }
 .header.scrolled {
     background: rgba(248, 249, 250, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary-silver);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
 }
+.header.scrolled .logo-text h1 {
+    color: var(--secondary-navy);
+}
+.header.scrolled .nav-link {
+    color: var(--secondary-navy);
+}
+.header.scrolled .nav-link {
+    color: var(--secondary-navy);
+}
+
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -105,24 +117,13 @@ a {
 }
 .logo {
     width: 60px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    object-fit: cover;
+    height: 60px;
 }
 
 .logo-text h1 {
     font-size: 1.25rem;
     margin-bottom: 0.25rem;
-    color: var(--secondary-navy);
-}
-
-.logo-text p {
-    font-size: 0.75rem;
-    color: var(--text-dark);
-    margin-bottom: 0;
-    font-style: italic;
+    color: var(--primary-silver-dark);
 }
 
 .nav-menu {
@@ -132,7 +133,7 @@ a {
 }
 
 .nav-link {
-    color: var(--secondary-navy);
+    color: var(--primary-silver-dark);
     font-weight: 500;
     padding: 0.5rem;
     position: relative;
@@ -144,7 +145,6 @@ a {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
     background-color: var(--accent-gold);
     transition: 0.3s ease;
 }
@@ -196,8 +196,8 @@ a {
 .centering{
     display: flex;
     justify-content: center;   /* horizontal center */
-   align-items: center;       /* vertical center if needed */
-  gap: 12px;
+    align-items: center;       /* vertical center if needed */
+    gap: 12px;
 }
  
 .btn-secondary {
@@ -245,7 +245,7 @@ a {
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
-    padding-top: 130px;
+    padding-top: 80px;
 }
 .hero-content h1{
     padding-top: 50px;
@@ -484,16 +484,6 @@ a {
     transition: 0.3s ease;
 }
 
-.contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
-
-.contact-card:hover::before {
-    width: 100%;
-    opacity: 0.05;
-}
-
 .contact-card-icon {
     width: 60px;
     height: 60px;
@@ -549,44 +539,6 @@ a {
     color: var(--accent-gold);
 }
 
-.contact-form {
-    background: var(--white);
-    padding: 30px;
-    border-radius: var(--radius-lg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: var(--secondary-navy);
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid var(--primary-silver-dark);
-    border-radius: var(--radius-md);
-    font-family: inherit;
-    font-size: 1rem;
-    transition: 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: var(--accent-gold);
-    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-}
-
 .error-message {
     color: #e53e3e;
     font-size: 0.875rem;
@@ -609,8 +561,8 @@ a {
 
 .footer-logo .logo2 {
     border-radius: 15px;
-    height: 120px;
-    width: 150px;
+    height: 140px;
+    width: 180px;
 }
 
 .footer-logo h3{
