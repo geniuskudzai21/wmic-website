@@ -206,6 +206,9 @@
         grid-template-columns: 1fr;
         gap: 30px;
     }
+    .contact-card-content{
+        font-size: 14px;
+    }
     
     .hero-buttons .btn {
         width: 100%;
