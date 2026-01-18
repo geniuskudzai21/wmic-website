@@ -113,21 +113,6 @@ a {
     height: 100px;
 }
 
-/* Center navigation on all pages except home page */
-body:not(.home-page) .header-container {
-    justify-content: center;
-}
-
-body:not(.home-page) .header-container .logo-container {
-    position: absolute;
-    left: 20px;
-}
-
-body:not(.home-page) .header-container .header-actions {
-    position: absolute;
-    right: 20px;
-}
-
 .header-actions {
     display: flex;
     align-items: center;
@@ -245,7 +230,7 @@ body:not(.home-page) .header-container .header-actions {
  
 .btn-secondary {
     background-color: transparent;
-    border: 1px solid var(--accent-gold);
+    border: 2px solid var(--accent-gold);
     color: var(--accent-gold);
 }
 
@@ -584,13 +569,13 @@ body:not(.home-page) .header-container .header-actions {
 }
 
 .contact-card-content a {
-    color: var(--accent-gold);
+    color: var(--secondary-charcoal);
     text-decoration: none;
     transition: 0.2s ease;
 }
 
 .contact-card-content a:hover {
-    color: var(--secondary-navy);
+    color: var(--accent-gold);
     text-decoration: underline;
 }
 

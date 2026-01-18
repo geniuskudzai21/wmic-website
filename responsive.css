@@ -235,5 +235,8 @@
         margin-bottom: 10px;
         padding: 10px 17px
     }
+    .content-visual{
+        display: none;
+    }
 }
 
