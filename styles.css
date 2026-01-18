@@ -113,6 +113,21 @@ a {
     height: 100px;
 }
 
+/* Center navigation on all pages except home page */
+body:not(.home-page) .header-container {
+    justify-content: center;
+}
+
+body:not(.home-page) .header-container .logo-container {
+    position: absolute;
+    left: 20px;
+}
+
+body:not(.home-page) .header-container .header-actions {
+    position: absolute;
+    right: 20px;
+}
+
 .header-actions {
     display: flex;
     align-items: center;
