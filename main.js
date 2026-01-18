@@ -1,11 +1,9 @@
-// ===== DOM ELEMENTS =====
 const header = document.querySelector('.header');
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const currentYearSpan = document.getElementById('current-year');
 const contactForm = document.getElementById('contact-form');
 
-// ===== HEADER SCROLL EFFECT =====
 if (header) {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -16,7 +14,6 @@ if (header) {
     });
 }
 
-// ===== MOBILE MENU TOGGLE =====
 if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');

@@ -37,22 +37,6 @@
 }
 
 @media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-    
-    .hamburger.active .hamburger-line:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    
-    .hamburger.active .hamburger-line:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active .hamburger-line:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    
     .nav-menu {
         position: fixed;
         top: 70px;
@@ -69,6 +53,27 @@
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
     }
     
     .nav-link {
@@ -139,6 +144,10 @@
     .grid-2 {
         grid-template-columns: 1fr !important;
         gap: 20px !important;
+    }
+    
+    .btn-header {
+        display: none;
     }
 }
 
@@ -226,3 +235,76 @@
         padding: 10px 17px
     }
 }
+
+
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .nav-menu {
+        gap: 20px;
+        font-size: 13px;
+    }
+    
+    .btn-header {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+        order: 3;
+    }
+    
+    .hamburger {
+        display: block;
+        order: 4;
+    }
+    
+    .header-actions {
+        gap: 10px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+    .header-container {
+        padding: 0.5rem 0;
+        height: auto;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(248, 249, 250, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 0;
+        padding: 20px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+    }
+    .header .logo-text h1 {
+    color: var(--secondary-navy);
+    }
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .btn-header {
+        padding: 6px 16px;
+        font-size: 0.75rem;
+        min-width: auto;
+    }
+    
+    .header-actions {
+        position: relative;
+        z-index: 1001;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+}
+

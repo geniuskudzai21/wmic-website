@@ -597,13 +597,6 @@ a {
     color: var(--accent-gold);
 }
 
-.error-message {
-    color: #e53e3e;
-    font-size: 0.875rem;
-    margin-top: 5px;
-    display: none;
-}
-
 .footer {
     background: var(--secondary-charcoal);
     color: var(--white);
@@ -676,4 +669,3 @@ a {
 .text-center {
     text-align: center;
 }
-
