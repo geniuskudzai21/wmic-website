@@ -348,11 +348,13 @@ a {
 
 .section-header {
     text-align: center;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
+    margin-top: var(--space-md);
 }
 
 .section-header h2 {
     display: inline-block;
+    margin-bottom: 0;
 }
 .image-placeholder{
     height: 300px; 
@@ -362,6 +364,11 @@ a {
     align-items: center; 
     justify-content: center; 
     box-shadow: 1px 1px 1px 1px rgba(0, 47, 255, 0.45);
+}
+
+.image-placeholder i {
+    font-size: 6rem;
+    color: var(--accent-gold);
 }
 .section-header p {
     max-width: 600px;
