@@ -260,17 +260,16 @@ a {
     z-index: -1;
 }
 .hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.77);
-  z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.77);
+    z-index: -1;
 }
 .hero.curved-bottom {
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
 }
-
 .cta-hero {
     position: relative;
     padding: var(--space-xl) 0;
@@ -298,6 +297,11 @@ a {
     inset: 0;
     background: rgba(0, 0, 0, 0.77);
     z-index: -1;
+}
+
+.cta-hero .cta-content {
+    position: relative;
+    z-index: 2;
 }
 .hero-content {
     max-width: 900px;
@@ -334,7 +338,9 @@ a {
 }
 .section {
     padding: var(--space-xl) 0;
-    
+    position: relative;
+    background: var(--primary-silver);
+    overflow: hidden;
 }
 
 .section-header {
@@ -727,18 +733,6 @@ a {
     padding-top: 100px;
 }
 
-.cta-section-center {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.cta-buttons-flex {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .btn-gold {
     background-color: var(--accent-gold);
 }
@@ -766,30 +760,6 @@ a {
 .faq-item p {
     display: none;
     margin-top: 15px;
-}
-
-.cta-bg-image {
-    position: relative;
-    overflow: hidden;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    color: var(--white);
-    background: url('assets/team.jpg') center/cover no-repeat;
-}
-
-.cta-bg-image::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('assets/company.jpg') center / cover no-repeat;
-    z-index: -1;
-    filter: blur(3px);
-}
-
-.cta-bg-image .container {
-    position: relative;
-    z-index: 2;
 }
 
 .integration-benefits {
@@ -859,59 +829,3 @@ a {
     margin-right: 10px;
 }
 
-.cta-overlay {
-    position: relative;
-    overflow: hidden;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    color: var(--white);
-}
-
-.cta-overlay::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url('assets/company.jpg') center/cover no-repeat;
-    filter: blur(3px);
-    transform: scale(1.1);
-    z-index: -2;
-}
-
-.cta-overlay::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.77);
-    z-index: -1;
-}
-
-.cta-overlay .container {
-    position: relative;
-    z-index: 1;
-}
-
-.mt-3 {
-    margin-top: 2rem;
-}
-
-.text-center-custom {
-    max-width: 800px;
-    margin: 30px auto;
-}
-
-.cta-overlay-bg {
-    position: absolute;
-    inset: 0;
-    background: url('assets/company.jpg') center/cover no-repeat;
-    filter: blur(3px);
-    transform: scale(1.1);
-    z-index: -2;
-}
-
-.cta-overlay-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.77);
-    z-index: -1;
-}
