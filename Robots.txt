@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wmic.co.za/sitemap.xml
