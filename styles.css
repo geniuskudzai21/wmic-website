@@ -104,6 +104,9 @@ a {
 .header.scrolled .btn-header:hover {
     background-color: var(--accent-gold);
 }
+.header.scrolled .nav-link.active {
+    color: var(--accent-gold);
+} 
 
 .header-container {
     display: flex;

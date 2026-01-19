@@ -5,6 +5,22 @@ const currentYearSpan = document.getElementById('current-year');
 const contactForm = document.getElementById('contact-form');
 
 if (header) {
+    // Initial check for scroll position on page load
+    const checkInitialScroll = () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+    
+    // Check immediately when DOM is loaded
+    document.addEventListener('DOMContentLoaded', checkInitialScroll);
+    
+    // Also check on window load in case DOMContentLoaded fires before scroll position is set
+    window.addEventListener('load', checkInitialScroll);
+    
+    // Continue with scroll listener
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -188,18 +204,38 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.textContent = new Date().getFullYear();
     }
     
-    // Set active nav link based on current page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-        if (linkHref === currentPage || 
-            (currentPage === '' && linkHref === 'index.html') ||
-            (currentPage === 'index.html' && linkHref === 'index.html')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
+    // Function to set active nav link based on current page
+    const setActiveNavLink = () => {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        // Handle different URL formats
+        let normalizedCurrentPage = currentPage;
+        if (currentPage === '' || currentPage === '/') {
+            normalizedCurrentPage = 'index.html';
         }
-    });
+        
+        navLinks.forEach(link => {
+            const linkHref = link.getAttribute('href');
+            
+            // Remove active class from all links first
+            link.classList.remove('active');
+            
+            // Add active class to current page link
+            if (linkHref === normalizedCurrentPage || 
+                (normalizedCurrentPage === 'index.html' && (linkHref === 'index.html' || linkHref === './index.html' || linkHref === '/index.html')) ||
+                (normalizedCurrentPage === currentPage && linkHref === currentPage)) {
+                link.classList.add('active');
+            }
+        });
+    };
+    
+    // Set active link on page load
+    setActiveNavLink();
+    
+    // Update active link when URL changes (for single page app behavior)
+    window.addEventListener('popstate', setActiveNavLink);
+    
+    // Also check periodically to ensure active state is correct
+    setInterval(setActiveNavLink, 1000);
 });
