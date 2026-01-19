@@ -238,5 +238,24 @@
     .content-visual{
         display: none;
     }
+    
+    .cta-section {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+    
+    .cta-section-center {
+        margin: 30px auto 0;
+    }
+    
+    .cta-buttons-flex {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .cta-buttons-flex .btn {
+        width: 100%;
+        max-width: 280px;
+    }
 }
 

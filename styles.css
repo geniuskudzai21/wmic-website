@@ -829,3 +829,29 @@ a {
     margin-right: 10px;
 }
 
+.cta-section {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center;
+}
+
+.cta-section-center {
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.cta-buttons-flex {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.cta-buttons-flex .btn {
+    margin: 0;
+}
+
